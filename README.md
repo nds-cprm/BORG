@@ -79,14 +79,14 @@ Convert all CPRM technical databases from SQL to JSON documents.
   
   ## Images
   
-  ### Disco IBM de 5 Mb em 1956:
+  ### Disco IBM de 5 Mb em 1956: Cada Megabyte custava US$90,000 atuais;
   
   ![ibm5Mb1956](https://user-images.githubusercontent.com/14941647/162478798-ff485e38-aef7-4b03-9c07-4fbc3ddfd5b5.jpeg)
   
-  ### Disco de 1 Tb em 2018:
+  ### Disco de 1 Tb em 2022: Cada Terabyte (1000 Megabytes) custa US$ 100,00 atuais;
   
-  ![WD_BLACK_NVME_SSD_1TB](https://user-images.githubusercontent.com/14941647/162480365-1f48eb06-0662-4bef-ad6c-9de7869caff0.jpg)
-!
+  ![WD_BLACK_SN750_SSD_1TB](https://user-images.githubusercontent.com/14941647/162482648-93f2ade4-f8d0-40b8-afb5-1338e6827163.jpg)
+  
   
 # License
 
