@@ -42,7 +42,7 @@ Convert all CPRM technical databases from SQL to JSON documents.
   
   Os arquivos DICN serão usados como modelos de consistência das informações dos documentos;
   
-  As consistências serão utilizadas para criação de adendos externos aos documentos, sem modificação das informações originais;
+  As consistências serão utilizadas para criação de adendos, sem modificação das informações originais;
   
   Os arquivos JSON serão certificados por SHA-256, garantindo a integridade das informações;
   
@@ -86,6 +86,10 @@ Convert all CPRM technical databases from SQL to JSON documents.
   ### Disco de 1 Tb em 2022: Cada Terabyte (1000 Megabytes) custa US$ 100,00 atuais;
   
   ![WD_BLACK_SN750_SSD_1TB](https://user-images.githubusercontent.com/14941647/162482648-93f2ade4-f8d0-40b8-afb5-1338e6827163.jpg)
+  
+  ### Star Trek episodio Q-Who 
+  
+  ![QWho](https://user-images.githubusercontent.com/14941647/162483751-31df3405-ab28-4b96-ac19-26831372aff0.jpg)
   
   
 # License
