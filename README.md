@@ -56,17 +56,19 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   ## Premissas
   
-    Uso de software e protocolos e especificações públicas;
+  Uso de protocolos e especificações públicas, ISO e RFC;
   
-    Uso de UTF-8 para codificação dos documentos;
+  Uso de UTF-8 para codificação dos documentos;
   
-    Uso de SHA-256, ou maior, para certificação das informações;
+  Uso de UUID exclusivo para cada documento;
   
-    Uso de UUID exclusivo para cada documento;
+  Uso de SHA-256, ou maior, para certificação das informações;
   
-    Uso de paradigma cliente servidor em ambiente web com protocolo https;
+  Uso do paradigma cliente servidor em ambiente web com protocolo https;
   
-    Atendimento as legislações vigentes.
+  Atendimento ao FOSS [4];
+  
+  Atendimento as legislações vigentes.
   
   ## Referencias
   
@@ -76,6 +78,7 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   [3] https://www.json.org/json-en.html
   
+  [4] https://pt.wikipedia.org/wiki/Software_livre_e_de_c%C3%B3digo_aberto
   
   ## Images
   
@@ -87,7 +90,9 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   ![WD_BLACK_SN750_SSD_1TB](https://user-images.githubusercontent.com/14941647/162482648-93f2ade4-f8d0-40b8-afb5-1338e6827163.jpg)
   
-  ### Star Trek episodio Q-Who 
+  ### Star Trek episodio Q-Who
+  
+  https://whatculture.com/tv/star-trek-10-secrets-of-the-borg-cube-you-need-to-know
   
   ![QWho](https://user-images.githubusercontent.com/14941647/162483751-31df3405-ab28-4b96-ac19-26831372aff0.jpg)
   
