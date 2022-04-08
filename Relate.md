@@ -1,7 +1,8 @@
 
 ## this file is still a stub
 
-![databases-time-history](https://user-images.githubusercontent.com/14941647/162513263-cedcafb0-b187-47a3-90d5-9af610beb9c2.jpg)
+![databases-time-history](https://user-images.githubusercontent.com/14941647/162513263-cedcafb0-b187-47a3-90d5-9af610beb9c2.jpg) 
+from <https://objectbox.io/sqlite-alternatives/>
 
 
 classic SQL: DB2, Oracle, MySQL, Microsoft SQL Server, and PostgreSQL
@@ -19,3 +20,7 @@ The five critical differences between SQL vs NoSQL are: <https://www.integrate.i
 " SQL was developed in the 1970s with a focus on reducing data duplication while NoSQL was developed in the late 2000s, 
   with a focus on scaling and allowing for rapid application change driven by agile and DevOps practices. ", 
   adapted from https://www.mongodb.com/nosql-explained/nosql-vs-sql
+  
+  ## about C
+  
+  http://damienkatz.net/2013/01/the_unreasonable_effectiveness_of_c.html
