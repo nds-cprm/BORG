@@ -4,7 +4,7 @@
 
 Base Origins. 
   
-Convert all CPRM technical databases from SQL to JSON documents.
+To convert all CPRM technical databases from SQL tables to JSON documents.
 
 ## Introdução
   
