@@ -8,7 +8,7 @@ Links.md
 
 [3] Padrao W3C, <https://www.w3.org/2004/02/skos/intro>
 
-[4] SKOSMOS, <https://skosmos.org>
+[4] Simple Knowledge Organization System - SKOMOS, <https://skosmos.org>
 
 [5] SHA-256, <https://en.wikipedia.org/wiki/SHA-2>
 
