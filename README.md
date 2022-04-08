@@ -12,7 +12,7 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   Historicamente as informações dos documentos, tais como relatorios de campo, de analises, de projetos, etc, não são transacionais e após a consistência, não devem ser modificadas.
   
-  Os documentos tem sido modelados em tabelas SQL para serem utilizados em gerenciadores de bancos de dados variados, desde o DB2, nos mainframes IBM 1130, ao PostGress e Oracle, nos computadores x86 64-bits atuais.
+  Os documentos tem sido modelados em tabelas SQL para serem utilizados em varios gerenciadores de bancos de dados digitais, desde o DB2, nos mainframes IBM 1130, ao PostGress e Oracle, nos computadores x86 64-bits atuais.
   
   A cada atualização de tecnologia ou de metodologia, se faz necessario a redefinição das tabelas nos modelos SQL, com criação de outros campos, sem compatibilidade ou existencia, nos documentos anteriores. Estas mudanças introduzem factoides nas informações registradas, causados por incompatibilidades, que sao atenuadas com a representação da ausencia da informação atual no documento original.
   
