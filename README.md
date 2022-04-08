@@ -75,6 +75,11 @@ Convert all CPRM technical databases from SQL to JSON documents.
   [2] https://www.json.org/json-en.html
   
   
+  ## Images
+  
+  ![ibm5Mb1956](https://user-images.githubusercontent.com/14941647/162478798-ff485e38-aef7-4b03-9c07-4fbc3ddfd5b5.jpeg)
+  
+  
 # License
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
