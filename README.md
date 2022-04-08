@@ -22,11 +22,11 @@ Convert all CPRM technical databases from SQL to JSON documents.
   
   No principio dos trabalhos de campo, a localização em coordenadas dos locais era realizada por instrumentos fisicos de medição, como teodolitos e niveis, e servia de referencia para as anotações de diversas descrições, amostragens e medidas. Era comum que a primeira localização fosse da descrição de algum afloramento de rochas, e que outras atividades usassem esta localização como referencia. 
   
-  Quando as informações passaram a ser preservadas em meio digital, o armazenamento digital era restrito e custoso, então a base Aflora, de afloramentos, foi a principal referencia de localização para todas as outras bases.
+  Quando as informações passaram a ser preservadas em meio digital, o armazenamento digital era restrito e custoso [2], então a base Aflora, de afloramentos, foi a principal referencia de localização para todas as outras bases.
   
   Esta dependencia se prolongou, mesmo com o advento do posicionamento por radio e do digital por satelites GPS, e da ampla disponibilidade de armazenamento digital, de Megabytes para Petabytes, pelo condicionamento à utilização dos modelos SQL.
   
-  O conceito de Estação-Visita-Projeto (Mota [1]), renova a estrutura de referências geográficas, restabelecendo a lógica da hieraquia de georeferenciamento dos documentos, no espaço e no tempo.
+  O conceito de Estação-Visita-Projeto (Mota [3]), renova a estrutura de referências geográficas, restabelecendo a lógica da hieraquia de georeferenciamento dos documentos, no espaço e no tempo.
   
   Este conceito pode ser utilizado em todos os documentos tecnicos, legados e atuais, na forma de adendos ao conteudo original.
   
@@ -72,13 +72,21 @@ Convert all CPRM technical databases from SQL to JSON documents.
   
   [1] Mota, 
   
-  [2] https://www.json.org/json-en.html
+  [2] https://www.backblaze.com/blog/history-hard-drives/
+  
+  [3] https://www.json.org/json-en.html
   
   
   ## Images
   
+  ### Disco IBM de 5 Mb em 1956:
+  
   ![ibm5Mb1956](https://user-images.githubusercontent.com/14941647/162478798-ff485e38-aef7-4b03-9c07-4fbc3ddfd5b5.jpeg)
   
+  ### Disco de 1 Tb em 2018:
+  
+  ![WD_BLACK_NVME_SSD_1TB](https://user-images.githubusercontent.com/14941647/162480365-1f48eb06-0662-4bef-ad6c-9de7869caff0.jpg)
+!
   
 # License
 
