@@ -40,9 +40,11 @@ Convert all CPRM technical databases from SQL to JSON documents.
   
   Os arquivos JSON serão usados para criação de arquivos de dicionarios (DICN) relativos aos campos.
   
-  Os arquivos DICN serão usados como modelos de consistencia das informações dos documentos;
+  Os arquivos DICN serão usados como modelos de consistência das informações dos documentos;
   
-  As consistencias serao utilizadas para criação de adendos aos documentos, sem modificação das informações originais;
+  As consistências serão utilizadas para criação de adendos externos aos documentos, sem modificação das informações originais;
+  
+  Os arquivos JSON serão certificados por SHA-256, garantindo a integridade das informações;
   
   Os arquivos JSON serão convertidos para arquivos HTML, incluindo as referencias JSON;
   
