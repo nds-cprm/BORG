@@ -54,6 +54,19 @@ Convert all CPRM technical databases from SQL to JSON documents.
   
   Os arquivos disponibilizados podem ser indexados e acessados por buscadores publicos.
   
+  ## Premissas
+  
+    Uso de software e protocolos e especificações públicas;
+  
+    Uso de UTF-8 para codificação dos documentos;
+  
+    Uso de SHA-256, ou maior, para certificação das informações;
+  
+    Uso de UUID exclusivo para cada documento;
+  
+    Uso de paradigma cliente servidor em ambiente web com protocolo https;
+  
+    Atendimento as legislações vigentes.
   
   ## Referencias
   
