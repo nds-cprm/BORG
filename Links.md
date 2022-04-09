@@ -2,15 +2,25 @@ Links.md
 
 ## Coleção de links diversos para referencia ao BORG
 
-[1] JSON, <https://www.json.org/json-en.html>
+JSON, <https://www.json.org/json-en.html>
 
-[2] Thesaurus GOV.AU, <https://www.dmp.wa.gov.au/Geoscience-Thesaurus-GeMPet-1564.aspx>
+JSON W3C, <https://www.w3schools.com/js/js_json.asp>
 
-[3] Padrao W3C, <https://www.w3.org/2004/02/skos/intro>
+Thesaurus GOV.AU, <https://www.dmp.wa.gov.au/Geoscience-Thesaurus-GeMPet-1564.aspx>
 
-[4] Simple Knowledge Organization System - SKOMOS, <https://skosmos.org>
+Thesaurus Padrao W3C, <https://www.w3.org/2004/02/skos/intro>
 
-[5] SHA-256, <https://en.wikipedia.org/wiki/SHA-2>
+Simple Knowledge Organization System - SKOMOS, <https://skosmos.org>
+
+SHA-256, <https://en.wikipedia.org/wiki/SHA-2>
+
+JSON to FORM, <https://github.com/jsonform/jsonform>
+
+JSON to FORM, https://jsonforms.io/
+
+JSON to FORM to JSON, https://www.cssscript.com/form-data-json/>
+
+SCHEMA to JSON, <https://json-schema.org/>
 
 
 
