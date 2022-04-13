@@ -84,6 +84,8 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   [5] https://en.wikipedia.org/wiki/Simple_Features
   
+  [6] https://en.wikipedia.org/wiki/SpatiaLite
+  
   ## Images
   
   ### Disco IBM de 5 Mb em 1956: Cada Megabyte custava US$90,000 atuais;
