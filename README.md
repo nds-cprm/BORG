@@ -68,6 +68,8 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   Atendimento ao FOSS [4];
   
+  Uso de Simple Features[5], para modelamento georeferenciado;
+  
   Atendimento as legislações vigentes.
   
   ## Referencias
@@ -79,6 +81,8 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   [3] https://www.json.org/json-en.html
   
   [4] https://pt.wikipedia.org/wiki/Software_livre_e_de_c%C3%B3digo_aberto
+  
+  [5] https://en.wikipedia.org/wiki/Simple_Features
   
   ## Images
   
