@@ -1,0 +1,6 @@
+SQL> desc af_rocha_x_minerais
+Nome             Nulo?    Tipo       
+---------------- -------- ---------- 
+COD_RX_X_MINERAL NOT NULL NUMBER(11) 
+COD_ROCHA        NOT NULL NUMBER(11) 
+COD_MINERAL      NOT NULL NUMBER(5)  

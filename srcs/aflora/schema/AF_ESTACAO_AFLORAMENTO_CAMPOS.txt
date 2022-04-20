@@ -1,0 +1,5 @@
+SQL> desc af_estacao_afloramento
+Nome           Nulo?    Tipo       
+-------------- -------- ---------- 
+ID_ESTACAO     NOT NULL NUMBER(38) 
+ID_AFLORAMENTO NOT NULL NUMBER(38) 

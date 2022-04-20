@@ -1,0 +1,15 @@
+SQL> desc af_rocha
+Nome                       Nulo?    Tipo        
+-------------------------- -------- ----------- 
+ID                         NOT NULL NUMBER(38)  
+ID_AFLORAMENTO             NOT NULL NUMBER(11)  
+ID_TIPO_ROCHA              NOT NULL NUMBER(11)  
+COTA                       NOT NULL VARCHAR2(6) 
+PERCENTAGEM_AFLORAMENTO    NOT NULL NUMBER(5)   
+ID_GRAU_INTEMPERISMO                NUMBER(5)   
+ID_COR_ROCHA_SA                     NUMBER(5)   
+ID_COR_ROCHA_INTEMPERIZADA          NUMBER(5)   
+ID_GEOMETRIA                        NUMBER(5)   
+ID_INDICE_COR                       NUMBER(5)   
+DIMENSAO                            NUMBER(5)   
+ID_GRANULACAO                       NUMBER(5)   

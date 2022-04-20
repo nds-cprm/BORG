@@ -1,0 +1,6 @@
+SQL> desc af_amostras_analises
+Nome             Nulo?    Tipo       
+---------------- -------- ---------- 
+COD_ANALISE      NOT NULL NUMBER(11) 
+COD_AMOSTRA      NOT NULL NUMBER(11) 
+COD_TIPO_ANALISE NOT NULL NUMBER(5)  

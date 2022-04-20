@@ -1,0 +1,17 @@
+Nome                        Nulo?    Tipo            
+--------------------------- -------- --------------- 
+OBJECTID                    NOT NULL NUMBER(38)      
+ID                          NOT NULL NUMBER(38)      
+ID_METODO_GEOPOSICIONAMENTO          NUMBER(5)       
+ALTITUDE                             NUMBER(38)      
+TOPONIMIA                   NOT NULL NVARCHAR2(180)  
+ID_GEOLOGO                  NOT NULL NUMBER(5)       
+DATA_CADASTRO               NOT NULL DATE            
+DIMENSAO                             NUMBER(38)      
+ID_TIPO_AFLORAMENTO                  NUMBER(5)       
+DESCRICAO                            NCLOB           
+NUMERO_CAMPO                         NVARCHAR2(20)   
+ID_SUREG                    NOT NULL NUMBER(5)       
+ID_CATEGORIA                NOT NULL NUMBER(5)       
+ID_FOLHA                             NUMBER(11)      
+SHAPE                                SDE.ST_GEOMETRY 

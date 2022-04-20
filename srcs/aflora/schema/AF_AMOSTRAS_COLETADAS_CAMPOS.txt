@@ -1,0 +1,7 @@
+SQL> desc af_amostras_coletadas
+Nome              Nulo?    Tipo         
+----------------- -------- ------------ 
+COD_AMOSTRA       NOT NULL NUMBER(38)   
+COD_TIPO_AMOSTRA  NOT NULL NUMBER(5)    
+COD_ROCHA         NOT NULL NUMBER(11)   
+NUM_CAMPO_AMOSTRA          VARCHAR2(16) 

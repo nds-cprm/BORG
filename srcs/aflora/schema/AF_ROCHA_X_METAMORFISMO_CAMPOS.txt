@@ -1,0 +1,8 @@
+SQL> desc af_rocha_x_metamorfismo
+Nome                    Nulo?    Tipo       
+----------------------- -------- ---------- 
+COD_RX_X_METAMORFISMO   NOT NULL NUMBER(11) 
+COD_TIPO_METAMORF       NOT NULL NUMBER(5)  
+COD_GRAU_METAMORF                NUMBER(5)  
+COD_FACIES_METAMORFISMO          NUMBER(5)  
+COD_ROCHA               NOT NULL NUMBER(11) 

@@ -1,0 +1,9 @@
+SQL> desc af_rochas_fragmentarias_x_matr
+Nome                         Nulo?    Tipo       
+---------------------------- -------- ---------- 
+COD_ROCHA_FRAG_MATR          NOT NULL NUMBER(11) 
+COD_ROCHA                    NOT NULL NUMBER(11) 
+COD_NATUREZA_MATRIZ          NOT NULL NUMBER(5)  
+COD_GRANULACAO_MATRIZ                 NUMBER(5)  
+COD_RELACAO_FRAGMENTO_MATRIZ NOT NULL NUMBER(5)  
+PERCENTAGEM_MATRIZ_ROCHA              NUMBER(5)  

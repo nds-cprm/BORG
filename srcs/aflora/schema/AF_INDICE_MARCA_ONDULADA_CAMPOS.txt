@@ -1,0 +1,8 @@
+SQL> desc af_indice_marca_ondulada
+Nome                  Nulo?    Tipo        
+--------------------- -------- ----------- 
+COD_IND_MARCA_ONDU    NOT NULL NUMBER(11)  
+COD_ROCHA             NOT NULL NUMBER(11)  
+COMPRIMENTO_ONDA      NOT NULL VARCHAR2(7) 
+AMPLITUDE             NOT NULL VARCHAR2(7) 
+INDICE_MARCA_ONDULADA          VARCHAR2(7) 

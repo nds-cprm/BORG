@@ -1,0 +1,7 @@
+SQL> desc af_usuarios
+Nome        Nulo?    Tipo         
+----------- -------- ------------ 
+USUARIO              VARCHAR2(15) 
+SENHA                VARCHAR2(15) 
+COD_BASE    NOT NULL VARCHAR2(10) 
+INSTITUICAO          VARCHAR2(10) 

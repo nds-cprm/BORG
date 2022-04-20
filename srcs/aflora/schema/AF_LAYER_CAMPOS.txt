@@ -1,0 +1,21 @@
+SQL> desc af_layer
+Nome                     Nulo?    Tipo            
+------------------------ -------- --------------- 
+OBJECTID                 NOT NULL NUMBER(38)      
+ID_AFLORAMENTO                    NUMBER(11)      
+ORIGEM                            NVARCHAR2(255)  
+METODO_GEOPOSICIONAMENTO          NVARCHAR2(50)   
+TOPONIMIA                         NVARCHAR2(180)  
+MUNICIPIO                         NVARCHAR2(254)  
+UF                                VARCHAR2(2)     
+GEOLOGO                           NVARCHAR2(255)  
+DATA_CADASTRO                     DATE            
+TIPO_AFLORAMENTO                  NVARCHAR2(50)   
+DESCRICAO                         NCLOB           
+NUMERO_CAMPO                      NVARCHAR2(20)   
+ROCHAS                            NCLOB           
+SUREG                             NVARCHAR2(20)   
+PROJETO                           NVARCHAR2(255)  
+CODIGO_FOLHA                      NVARCHAR2(18)   
+FOLHA                             NVARCHAR2(100)  
+SHAPE                             SDE.ST_GEOMETRY 

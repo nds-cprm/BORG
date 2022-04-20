@@ -1,0 +1,12 @@
+SQL> desc af_atitude_estruturas
+Nome              Nulo?    Tipo          
+----------------- -------- ------------- 
+ID                NOT NULL NUMBER(38)    
+ID_AFLORAMENTO    NOT NULL NUMBER(38)    
+ID_ESTRUTURA      NOT NULL NUMBER(5)     
+NOME_ESTRUTURA             VARCHAR2(100) 
+ANGULO_NORTE               NUMBER(5)     
+MERGULHO_CAIMENTO          NUMBER(5)     
+ID_SENTIDO                 NUMBER(5)     
+DESLOCAMENTO_M             VARCHAR2(6)   
+ID_ROCHA                   NUMBER(11)    
