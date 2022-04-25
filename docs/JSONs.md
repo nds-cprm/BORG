@@ -97,5 +97,18 @@ to
     ]
 
 
+## SQLSERVER to JSON
+
+@https://www.sqlshack.com/convert-sql-server-results-json/
+
+|SQL Server Data Type 	|JSON Data Type|
+|-----|-----|
+|char, nchar, varchar, nvarchar, date, datetime, datetime2, time, datetimeoffset, uniqueidentifier, money | string |
+|int, bigint, float, decimal, numeric |	number |
+| Bit | Boolean |
+|varbinary, binary, image, timestamp, rowversion  |	BASE64-encoded string |
+| | |
+
+
 
 
