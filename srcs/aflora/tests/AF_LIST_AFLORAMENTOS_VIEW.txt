@@ -1,0 +1,80 @@
+SQL> desc af_list_afloramentos
+Nome                 Nulo?    Tipo           
+-------------------- -------- -------------- 
+COD_AFLORAMENTO      NOT NULL NUMBER(38)     
+DIMENSAO_M                    NUMBER(38)     
+WGS_LON                       NUMBER         
+WGS_LAT                       NUMBER         
+ID_PROJETO                    NUMBER(11)     
+ID_FOLHA                      NUMBER(11)     
+DATUM                         CHAR(5)        
+METODO_GEOPOS                 NVARCHAR2(50)  
+ERRO_LOCACIONAL      NOT NULL VARCHAR2(255)  
+ALTITUDE_M                    NUMBER(38)     
+TOPONIMIA            NOT NULL NVARCHAR2(180) 
+COD_INTERNACIONAL             NVARCHAR2(18)  
+MUNICIPIO                     NVARCHAR2(254) 
+NOME                 NOT NULL VARCHAR2(255)  
+DATA_CADASTRO                 VARCHAR2(10)   
+DESCRICAO                     VARCHAR2(255)  
+DES_TIPO_AFLORAMENTO          VARCHAR2(50)   
+NOTAS                         NCLOB          
+AFLO_CAMPO                    NVARCHAR2(20)  
+SQL> desc af_list_afloramentos
+Nome                 Nulo?    Tipo           
+-------------------- -------- -------------- 
+COD_AFLORAMENTO      NOT NULL NUMBER(38)     
+DIMENSAO_M                    NUMBER(38)     
+WGS_LON                       NUMBER         
+WGS_LAT                       NUMBER         
+ID_PROJETO                    NUMBER(11)     
+ID_FOLHA                      NUMBER(11)     
+DATUM                         CHAR(5)        
+METODO_GEOPOS                 NVARCHAR2(50)  
+ERRO_LOCACIONAL      NOT NULL VARCHAR2(255)  
+ALTITUDE_M                    NUMBER(38)     
+TOPONIMIA            NOT NULL NVARCHAR2(180) 
+COD_INTERNACIONAL             NVARCHAR2(18)  
+MUNICIPIO                     NVARCHAR2(254) 
+NOME                 NOT NULL VARCHAR2(255)  
+DATA_CADASTRO                 VARCHAR2(10)   
+DESCRICAO                     VARCHAR2(255)  
+DES_TIPO_AFLORAMENTO          VARCHAR2(50)   
+NOTAS                         NCLOB          
+AFLO_CAMPO                    NVARCHAR2(20)  
+
+ CREATE OR REPLACE FORCE VIEW "AFLORA"."AF_LIST_AFLORAMENTOS" ("COD_AFLORAMENTO", "DIMENSAO_M", "WGS_LON", "WGS_LAT", "ID_PROJETO", "ID_FOLHA", "DATUM", "METODO_GEOPOS", "ERRO_LOCACIONAL", "ALTITUDE_M", "TOPONIMIA", "COD_INTERNACIONAL", "MUNICIPIO", "NOME", "DATA_CADASTRO", "DESCRICAO", "DES_TIPO_AFLORAMENTO", "NOTAS", "AFLO_CAMPO") AS 
+  SELECT af.ID COD_AFLORAMENTO,
+	   af.DIMENSAO DIMENSAO_M,
+	   sde.ST_X(af.SHAPE) WGS_LON,
+	   sde.ST_Y(af.SHAPE) WGS_LAT,
+     pf.ID_PROJETO,
+     af.ID_FOLHA,
+	   'WGS84' DATUM,
+	   al.METODO_GEOPOSICIONAMENTO METODO_GEOPOS,
+	   bmg.ERRO_LOCACIONAL,
+	   af.ALTITUDE ALTITUDE_M,
+	   af.TOPONIMIA,
+	   al.CODIGO_FOLHA COD_INTERNACIONAL,
+	   al.MUNICIPIO,
+	   bg.NOME,
+	   TO_CHAR(af.DATA_CADASTRO, 'DD/MM/RRRR') DATA_CADASTRO,
+	   bcc.NOME DESCRICAO,
+	   bta.NOME_PT DES_TIPO_AFLORAMENTO,
+	   af.DESCRICAO NOTAS,
+	   af.NUMERO_CAMPO AFLO_CAMPO
+FROM AFLORA.AF_AFLORAMENTO af,
+     AFLORA.AF_LAYER al,
+     PROJETOS.PR_FOLHA pf,
+     PROJETOS.PR_PROJETO pp,
+	   BIBLIOTECAS.BB_METODO_GEOPOSICIONAMENTO bmg,
+	   BIBLIOTECAS.BB_CENTRO_CUSTO bcc,
+	   BIBLIOTECAS.BB_GEOLOGO bg,
+	   AFLORA.AF_BB_TIPO_AFLORAMENTO bta
+WHERE al.ID_AFLORAMENTO = af.ID
+  AND af.ID_FOLHA =  pf.ID(+)
+  AND pf.ID_PROJETO = pp.ID(+)
+  AND af.ID_METODO_GEOPOSICIONAMENTO = bmg.ID
+  AND af.ID_GEOLOGO = bg.ID
+  AND pp.ID_CENTRO_CUSTO = bcc.ID(+)
+  AND af.ID_TIPO_AFLORAMENTO = bta.ID(+);
