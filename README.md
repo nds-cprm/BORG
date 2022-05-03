@@ -36,9 +36,9 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   As views serão exportadas como arquivos CSV, se possivel com campos entre aspas;
   
-  Os arquivos CSV serão convertidos em arquivos de documentos JSON.
+  Os arquivos CSV serão convertidos em arquivos de documentos estruturados JSON.
   
-  Os arquivos JSON serão usados para criação de arquivos de dicionarios (DICN) relativos aos campos.
+  Os arquivos JSON serão usados para avaliação de arquivos de dicionarios (DICN).
   
   Os arquivos DICN serão usados como modelos de consistência das informações dos documentos;
   
@@ -48,7 +48,7 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   Os arquivos JSON serão convertidos para arquivos HTML, incluindo as referencias JSON;
   
-  Os arquivos HTML serão disponibilizados e visualizados conforme CSS especifico para cada tipo de documento;
+  Os arquivos HTML serão disponibilizados e visualizados, conforme CSS especifico para cada tipo de documento;
   
   Os arquivos JSON serao utilizados para constituir informações para metadados de referencia dos documentos;
   
@@ -64,11 +64,11 @@ To convert all CPRM technical databases from SQL tables to JSON documents.
   
   Uso de SHA-256, ou maior, para certificação das informações;
   
-  Uso do paradigma cliente servidor em ambiente web com protocolo https;
+  Uso do paradigma cliente servidor em ambiente web 2.0 com protocolo https;
   
   Atendimento ao FOSS [4];
   
-  Uso de Simple Features[5], para modelamento georeferenciado;
+  Uso de Simple Features[5] e GeoJSON, para modelamento georeferenciado;
   
   Atendimento as legislações vigentes.
   
