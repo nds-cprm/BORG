@@ -17,5 +17,5 @@ A reconstituição dos documentos usando as informações das tabelas relacionai
 
 Em futuros projetos, esta estrutura e informações, podem ser comparadas com as imagens das cadernetas originais digitalizadas.
 
-[documento indice referencia] (aflora.documento.indice.md)
+[documento indice referencia](aflora.documento.indice.md)
 
