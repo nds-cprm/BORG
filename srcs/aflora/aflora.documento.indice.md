@@ -1,6 +1,8 @@
 ** this file is a stub **
 
-Afloramento
+# Afloramento
+
+comentario: As informações estao referenciadas por tabela e campo, da base SQL original.
 
 ## identificacao_projeto
 
@@ -8,158 +10,154 @@ comentario: Esse campo traz a informacao sobre o projeto comum a todos os dados 
 Representa a capa de uma caderneta de campo, a primeira informacao a ser preenchida no inicio de
 um processo de coleta de dados.
 
-af_estacao_afloramento_campos, id_afloramento
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_layer_campos, sureg
+sureg: af_layer_campos, sureg
 
-af_layer_campos, projeto
+projeto: af_layer_campos, projeto
 
-af_layer_campos, codigo_folha
+codigo folha: af_layer_campos, codigo_folha
 
-af_layer_campos, folha
+nome folha: af_layer_campos, folha
 
-af_afloramento_campos, id_sureg
+id: af_afloramento_campos, id_sureg
 
-af_afloramento_campos, id_categoria
+id: af_afloramento_campos, id_categoria
 
-af_afloramento_campos, id_folha
+id: af_afloramento_campos, id_folha
 
 ## identificacao_geologo
 
 comentario: Esse campo traz as informacoes do geologo como nome e id_geologo que referencia
 a informacao de quem foi o geologo que descreveu do afloramento.
 
-af_estacao_afloramento_campos, id_afloramento
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_afloramento_campos, id_geologo
+id: af_afloramento_campos, id_geologo
 
-af_layer_campos, geologo
+geologo: af_layer_campos, geologo
 
 ## cadastro_estacao
 
-comentario: Esse campo representa a primeira atividade de campo a ser feita pelo coletor da informacao.
-O campo id_estacao e SERIAL sequencial gerado automaticamente e servira para referenciar e linkar a
-outras tabelas. Enquanto o id_afloramento esta originalmente na tabela AF_ROCHA e faz referencia ao
+comentario: Esse campo representa a primeira atividade de campo a ser feita pelo coletor da informacao. O campo id_estacao e SERIAL sequencial gerado automaticamente e servira para referenciar e linkar a outras tabelas. Enquanto o id_afloramento esta originalmente na tabela AF_ROCHA e faz referencia ao id da tabela AF_AFLORAMENTO. Outro campo importante e o registro da data referente ao cadastro dessa informacao no campo data_cadastro.
 
-id da tabela
-AF_AFLORAMENTO. Outro campo importante e o registro da data referente ao cadastro
-dessa informacao no campo data_cadastro.
+id: af_estacao_afloramento_campos, id_estacao
 
-af_estacao_afloramento_campos, id_estacao
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_estacao_afloramento_campos, id_afloramento
+estacao: ???????
 
 ## toponimia
 
 comentario: Esse campo compreende toda a informacao necessaria para localizar o afloramento
 
-af_estacao_afloramento_campos, id_afloramento
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_afloramento_campos, toponimia
+toponimia: af_afloramento_campos, toponimia
 
-af_layer_campos, toponimia
+toponimia: af_layer_campos, toponimia
 
-af_layer_campos, municipio
+municipio: af_layer_campos, municipio
 
-af_layer_campos, uf
+estado: af_layer_campos, uf
 
-# codigo_afloramento
+## codigo_afloramento
 
-comentario: Esse campo e exclusivamente para o colocar o codigo do afloramento vinculado a estacao.
-Represenatando assim a atividade desenvolvida na estacao.
+comentario: Esse campo e exclusivamente para o colocar o codigo do afloramento vinculado a estacao. Represenatando assim a atividade desenvolvida na estacao.
 
-af_estacao_afloramento_campos, id_afloramento
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_estacao_afloramento_campos, cod_afloramento
+id: af_estacao_afloramento_campos, cod_afloramento
 
-af_afloramento_campos, numero_campo
+afloramento: af_afloramento_campos, numero_campo
 
-af_layer_campos, numero_campo
+afloramento: af_layer_campos, numero_campo
 
-af_estacao_afloramento_campos, data_cadastro
+data: af_estacao_afloramento_campos, data_cadastro
 
 ## dados_espaciais
 
-comentario: Esse campo compreende toda a informcao necessaria para o geoposicionamento do
-afloramento. O campo shape representa a latitude longitude. Esse formato shape e simple feature.
+comentario: Esse campo compreende toda a informcao necessaria para o geoposicionamento do afloramento. O campo shape representa a latitude longitude. Esse formato shape e simple feature.
 
-af_estacao_afloramento_campos, id_afloramento
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_afloramento_campos, id_metodo_geoposicionamento
+id: af_afloramento_campos, id_metodo_geoposicionamento
 
-af_afloramento_campos, altitude
+altitude: af_afloramento_campos, altitude
 
-af_afloramento_campos, shape
+coordenadas: af_afloramento_campos, shape
 
-af_layer_campos, metodo_geoposicionamento
+metodo posicionamento: af_layer_campos, metodo_geoposicionamento
 
-af_layer_campos, shape
+coordenadas: af_layer_campos, shape
 
 ## caracterizacao_fisica_afloramento
 
-comentario:Esse campo tem como objetivo descrever os aspectos fisicos do afloramento
-em questao.Teoricamente o campo id_tipo_afloramento obedece a um dicionario.
+comentario: Esse campo tem como objetivo descrever os aspectos fisicos do afloramento em questao.Teoricamente o campo id_tipo_afloramento obedece a um dicionario.
 
-af_estacao_afloramento_campos, id_afloramento
+id: af_estacao_afloramento_campos, id_afloramento
 
-af_afloramento_campos, id_tipo_afloramento
+id: af_afloramento_campos, id_tipo_afloramento
 
-af_layer_campos, tipo_afloramento
+tipo de afloramento: af_layer_campos, tipo_afloramento
 
-af_afloramento_campos, dimensao
+dimensão: af_afloramento_campos, dimensao
 
-af_afloramento_campos, descricao
+descrição: af_afloramento_campos, descricao
 
-af_layer_campos, descricao
+descrição: af_layer_campos, descricao
 
-af_bb_tipo_afloramento_campos, id
+id: af_bb_tipo_afloramento_campos, id
 
-af_bb_tipo_afloramento_campos, nome_pt
+nome (br): af_bb_tipo_afloramento_campos, nome_pt
 
-af_bb_tipo_afloramento_campos, nome_en
+nome (en): af_bb_tipo_afloramento_campos, nome_en
 
-## lista_rochas_afloramento
+## topologia
 
-comentario:Esse campo traz a informacao dos elementos(rochas) que ocorrem no afloramento.
-O campo id(identificador unico da rocha na tabela AF_ROCHA), o campo objectid assism como o id_afloramento
-referencia o id da tabela AF_AFLORAMENTO. Ele representa a conclusao apos a descricao de cada rocha do afloramento
+// comentario: lista_rochas_afloramento e contato_rochas correspondem ao esboço topologico descritivo do afloramento, nao confundir com a topografia --sugestoes de alternativas para o descritor?
 
-af_afloramento_campos, id
+### lista_rochas_afloramento
 
-af_layer_campos, id_afloramento
+// comentario: Esse campo traz a informacao dos elementos(rochas) que ocorrem no afloramento. Corresponde a lista indice das rochas, id(identificador unico da rocha na tabela AF_ROCHA), o campo objectid assim como o id_afloramento referencia o id da tabela AF_AFLORAMENTO. Ele representa a conclusao apos a descricao de cada rocha do afloramento.
 
-af_layer_campos, rochas
+id: af_afloramento_campos, id
+
+id: af_layer_campos, id_afloramento
+
+rocha: af_layer_campos, rochas
+
+// lista, enumeração sequencial de quantas rochas foram identificadas e descritas, deve ser correspondente ao cod_rocha*
 
 af_layer_campos, objectid
 
 af_afloramento_campos, objectid
 
-## contato_rochas
+### contato_rochas
 
-cometario:Esse campo descreve os contatos entre as unidades descritas na lista de afloramento
+// comentario: Esse campo descreve os contatos entre as unidades descritas na lista de afloramento.
 
-af_rocha_campos, id
+id: af_rocha_campos, id
 
-af_relacao_contato_campos, cod_afloramento
+id: af_relacao_contato_campos, cod_afloramento
 
-af_relacao_contato_campos, cod_rocha1
+rocha one: af_relacao_contato_campos, cod_rocha1
 
-af_relacao_contato_campos, cod_rocha2
+rocha two: af_relacao_contato_campos, cod_rocha2
 
-af_relacao_contato_campos, cod_relacao
+relacao: af_relacao_contato_campos, cod_relacao
 
-af_relacao_contato_campos, cod_tipo_contato
+contato: af_relacao_contato_campos, cod_tipo_contato
 
-## descricao_rocha
+## rochas
 
-cometario:Esse campo traz a descricao das caracteristicas mais basicas para cada rocha
-do afloramento em questao. Relacionamento 1:n, cada elemento(rocha) passara por esse processo
-de descricao. O campo a ser preenchido vai depender da natureza da rocha, sedimentar, ignea
-e metamorfica.
+### descricao_rocha
 
-af_rocha_campos, id_afloramento
+// comentario: Esse campo traz a descricao das caracteristicas mais basicas para cada rocha do afloramento em questao. Relacionamento 1:n, cada elemento(rocha) passara por esse processo de descricao. O campo a ser preenchido vai depender da natureza da rocha, sedimentar, ignea e metamorfica.
 
-af_rocha_campos, id
+id: af_rocha_campos, id_afloramento
+
+id: af_rocha_campos, id
 
 af_rocha_campos, id_tipo_rocha
 
@@ -187,9 +185,9 @@ af_bb_indice_cor_campos, nome_pt
 
 af_bb_indice_cor_campos, nome_en
 
-## alteracao_rocha
+### alteracao_rocha
 
-comentario: Esse campo vai trazer a informacao do grau de alteracao das rochas no afloramento.
+// comentario: Esse campo vai trazer a informacao do grau de alteracao das rochas no afloramento.
 
 af_rocha_x_alteracao_campos, cod_rocha
 
@@ -199,9 +197,9 @@ af_rocha_x_alteracao_campos, cod_tipo_alteracao
 
 af_rocha_x_alteracao_campos, cod_intensidade_alteracao
 
-## descricao_mineralogica
+### descricao_mineralogica
 
-cometario:Para determinar se a rocha e do tipo ignea, metamorfica ou sedimentar o primeiro criterio e descrever a mineralogia.
+// comentario: Para determinar se a rocha e do tipo ignea, metamorfica ou sedimentar o primeiro criterio e descrever a mineralogia.
 
 af_rocha_x_minerais_campos, cod_rocha
 
@@ -209,9 +207,9 @@ af_rocha_x_minerais_campos, cod_rx_x_mineral
 
 af_rocha_x_minerais_campos, cod_mineral
 
-## descricao_textura_rocha_ignea
+### descricao_textura_rocha_ignea
 
-cometario:A segunda etapa da descricao e quanto a textura da rocha.
+// comentario: A segunda etapa da descricao e quanto a textura da rocha.
 
 af_rocha_x_textura_campos, cod_rocha
 
@@ -289,9 +287,9 @@ af_bb_tipo_enclave_campos, des_tipo_enclave
 
 af_bb_tipo_enclave_campos, description
 
-## descricao_textura_rocha_sedimentar
+### descricao_textura_rocha_sedimentar
 
-comentario:A segunda etapa da descricao e quanto a textura da rocha.
+// comentario: A segunda etapa da descricao e quanto a textura da rocha.
 
 af_rochas_sedimentares_campos, cod_rocha
 
@@ -353,9 +351,9 @@ af_bb_relacao_fragmento_matriz_campos, des_relacao_fragmento
 
 af_bb_relacao_fragmento_matriz_campos, description
 
-## descricao_textura_rocha_metamorfica
+### descricao_textura_rocha_metamorfica
 
-comentario:A segunda etapa da descricao e quanto a textura da rocha.
+// comentario: A segunda etapa da descricao e quanto a textura da rocha.
 
 af_rocha_x_metamorfismo_campos, cod_rocha
 
@@ -415,7 +413,7 @@ af_bb_relacao_fragmento_matriz_campos, description
 
 ## estruturas_rochas
 
-comentario:Esse campo RELACIONA as estruturas das rochas seja ela em situacao de contato ou nao, primaria ou secundaria.
+// comentario: Esse campo RELACIONA as estruturas das rochas seja ela em situacao de contato ou nao, primaria ou secundaria.
 
 af_rocha_x_estruturas_campos, cod_rocha
 
@@ -461,7 +459,7 @@ af_indice_marca_ondulada_campos, indice_marca_ondulada
 
 ## amostra_coletada
 
-comentario:Esse campo relaciona as amostras coletadas, trazendo informacao sobre o codigo da rocha
+// comentario: Esse campo relaciona as amostras coletadas, trazendo informacao sobre o codigo da rocha.
 
 af_amostras_coletadas_campos, cod_rocha
 
@@ -473,7 +471,7 @@ af_amostras_coletadas_campos, num_campo_amostra
 
 ## amostra_analise
 
-comentario:Essse campo traz as informacoes da analise para amostra.
+// comentario: Essse campo traz as informacoes da analise para amostra.
 
 af_amostras_analises_campos, cod_amostra
 
@@ -495,7 +493,7 @@ af_bb_tipo_contato_campos, description
 
 ## multimidias
 
-comentario:Esse campo lista as multidias para cada afloramento
+comentario: Esse campo lista as multidias para cada afloramento.
 
 af_ilustracoes_campos, cod_afloramento
 
@@ -521,8 +519,7 @@ af_log_carga_ilustracoes_campos, erro
 
 ## origem_dados
 
-comentario:Esse campo traz informacao da origem dos dados, ou seja em qual banco
-de dados a informacao se encontra.
+// comentario: Esse campo traz informacao da origem dos dados, ou seja em qual banco de dados a informacao se encontra.
 
 af_layer_campos, origem
 
@@ -533,4 +530,16 @@ af_usuarios_campos, senha
 af_usuarios_campos, cod_base
 
 af_usuarios_campos, instituicao
+
+## data acervo
+
+data_acervo: not_null
+
+## identificação universal 
+
+uuid_ver4: not_null
+
+## integridade
+
+hash_sha1: not_null
 
