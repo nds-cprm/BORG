@@ -16,3 +16,6 @@ Note que o processo de determinação das coordenadas passou por varias tecnolog
 A reconstituição dos documentos usando as informações das tabelas relacionais atuais, pretende reconstituir a estrutura formal da caderneta de campo de acordo com as praticas atuais, sem as notações, os desenhos e os esboços originais. 
 
 Em futuros projetos, esta estrutura e informações, podem ser comparadas com as imagens das cadernetas originais digitalizadas.
+
+[documento indice referencia] (aflora.documento.indice.md)
+
