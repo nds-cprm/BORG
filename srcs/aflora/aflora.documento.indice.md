@@ -2,13 +2,11 @@
 
 # Afloramento
 
-comentario: As informações estao referenciadas por tabela e campo, da base SQL original.
+// comentario: As informações estao referenciadas por tabela e campo, da base SQL original.
 
 ## identificacao_projeto
 
-comentario: Esse campo traz a informacao sobre o projeto comum a todos os dados subsequentes.
-Representa a capa de uma caderneta de campo, a primeira informacao a ser preenchida no inicio de
-um processo de coleta de dados.
+// comentario: Esse campo traz a informacao sobre o projeto comum a todos os dados subsequentes. Representa a capa de uma caderneta de campo, a primeira informacao a ser preenchida no inicio de um processo de coleta de dados.
 
 id: af_estacao_afloramento_campos, id_afloramento
 
@@ -28,8 +26,7 @@ id: af_afloramento_campos, id_folha
 
 ## identificacao_geologo
 
-comentario: Esse campo traz as informacoes do geologo como nome e id_geologo que referencia
-a informacao de quem foi o geologo que descreveu do afloramento.
+// comentario: Esse campo traz as informacoes do geologo como nome e id_geologo que referencia a informacao de quem foi o geologo que descreveu do afloramento.
 
 id: af_estacao_afloramento_campos, id_afloramento
 
@@ -39,7 +36,7 @@ geologo: af_layer_campos, geologo
 
 ## cadastro_estacao
 
-comentario: Esse campo representa a primeira atividade de campo a ser feita pelo coletor da informacao. O campo id_estacao e SERIAL sequencial gerado automaticamente e servira para referenciar e linkar a outras tabelas. Enquanto o id_afloramento esta originalmente na tabela AF_ROCHA e faz referencia ao id da tabela AF_AFLORAMENTO. Outro campo importante e o registro da data referente ao cadastro dessa informacao no campo data_cadastro.
+// comentario: Esse campo representa a primeira atividade de campo a ser feita pelo coletor da informacao. O campo id_estacao e SERIAL sequencial gerado automaticamente e servira para referenciar e linkar a outras tabelas. Enquanto o id_afloramento esta originalmente na tabela AF_ROCHA e faz referencia ao id da tabela AF_AFLORAMENTO. Outro campo importante e o registro da data referente ao cadastro dessa informacao no campo data_cadastro.
 
 id: af_estacao_afloramento_campos, id_estacao
 
@@ -49,7 +46,7 @@ estacao: ???????
 
 ## toponimia
 
-comentario: Esse campo compreende toda a informacao necessaria para localizar o afloramento
+// comentario: Esse campo compreende toda a informacao necessaria para localizar o afloramento
 
 id: af_estacao_afloramento_campos, id_afloramento
 
@@ -63,7 +60,7 @@ estado: af_layer_campos, uf
 
 ## codigo_afloramento
 
-comentario: Esse campo e exclusivamente para o colocar o codigo do afloramento vinculado a estacao. Represenatando assim a atividade desenvolvida na estacao.
+// comentario: Esse campo e exclusivamente para o colocar o codigo do afloramento vinculado a estacao. Represenatando assim a atividade desenvolvida na estacao.
 
 id: af_estacao_afloramento_campos, id_afloramento
 
@@ -77,7 +74,7 @@ data: af_estacao_afloramento_campos, data_cadastro
 
 ## dados_espaciais
 
-comentario: Esse campo compreende toda a informcao necessaria para o geoposicionamento do afloramento. O campo shape representa a latitude longitude. Esse formato shape e simple feature.
+// comentario: Esse campo compreende toda a informcao necessaria para o geoposicionamento do afloramento. O campo shape representa a latitude longitude. Esse formato shape e simple feature.
 
 id: af_estacao_afloramento_campos, id_afloramento
 
@@ -93,7 +90,7 @@ coordenadas: af_layer_campos, shape
 
 ## caracterizacao_fisica_afloramento
 
-comentario: Esse campo tem como objetivo descrever os aspectos fisicos do afloramento em questao.Teoricamente o campo id_tipo_afloramento obedece a um dicionario.
+// comentario: Esse campo tem como objetivo descrever os aspectos fisicos do afloramento em questao.Teoricamente o campo id_tipo_afloramento obedece a um dicionario.
 
 id: af_estacao_afloramento_campos, id_afloramento
 
@@ -264,6 +261,8 @@ af_bb_relacao_fragmento_matriz_campos, des_relacao_fragmento
 af_bb_relacao_fragmento_matriz_campos, description
 
 ### rocha_enclave
+
+// comentario: A etapa da descricao de enclave da rocha.
 
 af_rocha_x_enclave_campos, cod_rocha
 
@@ -541,5 +540,5 @@ uuid_ver4: not_null
 
 ## integridade
 
-hash_sha1: not_null
+hash_sha256: not_null
 
