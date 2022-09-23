@@ -1,11 +1,7 @@
 
 function get_line_csv( file ) {
 
-        eof = getline inline < file
-
-        $0 = inline
-
-        $1 = $1
+        eof = getline < file
 
         if (eof <= 0) {
 
@@ -13,7 +9,11 @@ function get_line_csv( file ) {
 
             }
 
-# clean quotes
+# preserve line 
+
+        eline = $0
+
+# clean quotes, at start and final of each field
 
         for (n = 1; n <= NF; n++ ) {
 
@@ -23,8 +23,11 @@ function get_line_csv( file ) {
 
             }
 
-        return eof;
+# reload line
 
+        $0 = eline;
+
+        return eof;
 }
 
 
@@ -42,56 +45,57 @@ BEGIN {
 
     uuid_cmd = "uuid -v 1 -m ";
 
+    k = 0
 }
 
+# loop of stdio file list
 {
 
 # determina a sequencia de arquivos para o documento
     
-    cnt = 0;
-
-    while (getline > 0) {
+    print " raw: (" $0 ") "
 
 # clean quotes
 
-        for (n = 1; n <= NF; n++ ) {
+    for (n = 1; n <= NF; n++ ) {
 
-            gsub ("^\"","",$(n));
+        gsub ("^\"","",$(n));
 
-            gsub ("\"$","",$(n));
+        gsub ("\"$","",$(n));
 
-            }
-
-
-#    print "file : " $1 " fields : " NF
+        }
 
 # nome dos campos
 
-        for (n = 2; n <= NF; n++ ) {
+    for (n = 2; n <= NF; n++ ) {
 
-            fields[cnt][n-1] = $(n);
-    
-#    print "field : " $(n) " saved : " fields[cnt][n-1] 
+        fields[cnt][n-1] = $(n);
 
-            }
+        }
 
 # nome do arquivo
 
-        name[cnt] = $1
+    name[cnt] = $1
 
-# numero de campos
+# numero de campos, sem o nome do arquivo
     
-        size[cnt] = NF
+    size[cnt] = NF + 1 
 
-# ultimo lido
+# prepara ultimo registro lido
 
-        lock[cnt] = 0;
+    lock[cnt] = 0;
+
+    line[cnt] = "";
+
+# bypass headers
+
+    eof = get_line_csv( $1 );
+
+#    print " raw in: (" $0 ") "
 
 # novo arquivo
 
-        cnt++;
-
-        }
+    cnt++;
 
 } 
 
@@ -111,47 +115,10 @@ END {
 
     while ( eof ) {
 
-# o primeiro arquivo eh a referencia, nao pode ter fiducial repetido. 
+# balance line 
 
-        eof = get_line_csv(name[0]) 
+       for (k = 0; k < cnt; k++ ) {
 
-# pass headers
-
-        if ( ndocs > 0 ) {
-
-            fiducial = $1;
-        
-# determina o uuid e a data
-
-            date_cmd | getline date; close (date_cmd);
-
-            uuid_cmd | getline uuid; close (uuid_cmd);
-            
-            print "{ ";
-
-            print "\"uuid\" : \"" uuid "\",";    
-
-            print "\"date\" : \"" date "\",";    
-        
-            print "\"fiducial\" : \"" fiducial "\",";
-        
-            }
-
-# balance line dos outros aquivos
-
-        for (k = 1; k < cnt; k++ ) {
-
-# pass headers
-
-            if ( ndocs < 1 ) {
-
-                continue
-
-                }
-
-            print " doc(" ndocs ") file(" k ") fiducial(" fiducial ") check(" check ") lock(" lock[k] ") "
-
-# check balance
 
             if (lock[k] == 0) {
 
@@ -159,7 +126,9 @@ END {
 
                 eof = get_line_csv(name[k]) 
 
-                print " it : " k " new line " $0
+                eline = $0
+
+#                print " in : " name[k] " new line (" $0 ") "
 
                 }
 
@@ -169,39 +138,78 @@ END {
 
                 $0 = line[k] 
 
-                $1 = $1
+           #     $1 = $1
 
                 lock[k] = 0;
 
-                print " it : " k " last line " $0
+                print " in : " name[k] " last line (" $0 ") "
 
                 }   
 
-            print "\t{ ";
+
+# get a valid (no header) line
+
+            if (k == 0) {
+
+            # o primeiro arquivo eh a referencia, nao pode ter fiducial repetido. 
+
+                fiducial = $1;
+
+# determina o uuid e a data
+
+                date_cmd | getline date; close (date_cmd);
+
+                uuid_cmd | getline uuid; close (uuid_cmd);
+        
+                print "{ ";
+
+                print "\"uuid\" : \"" uuid "\",";    
+
+                print "\"date\" : \"" date "\",";    
+    
+                print "\"fiducial\" : \"" fiducial "\",";
+        
+                }   
 
             check = $1;
 
+            # print " file: " k " fiducial : (" fiducial ") check : (" check ") "
+
             if (fiducial == check) {
 
-                for (n = 1; n < size[k]; n++ ) {
+                tag = name[k]
 
-                    print  "\t\"" fields[k][n] "\" : \"" $(n) "\","
+                gsub (".csv.ok","",tag); 
+
+                print " \"" tag "\" : {"
+                
+                for (i = 1; i < size[k] - 1; i++ ) {
+        
+                    gsub ("^\"","",$(i));
+
+                    gsub ("\"$","",$(i));
+
+                    print  "\t\"" fields[k][i] "\" : \"" $(i) "\","
 
                     }
             
-            print "\t}"
+                print "\t}"
 
 # stay in this file until ge
 
-            lock[k] = 0
+                lock[k] = 0
 
-            }
+                if (k > 0) k = k - 1;
+
+                }
 
             else if (fiducial < check) {
             
                 lock[k] = 1;
 
-                line[k] = $0;
+                line[k] = $0
+
+                # print "line : {" line[k] "} (" $0 ")"
 
                 }
 
