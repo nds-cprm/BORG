@@ -51,6 +51,8 @@ BEGIN {
 # loop of stdio file list
 {
 
+    if ( match ($0, "^#") )  next;
+
 # determina a sequencia de arquivos para o documento
     
     print " raw: (" $0 ") "
@@ -119,7 +121,6 @@ END {
 
        for (k = 0; k < cnt; k++ ) {
 
-
             if (lock[k] == 0) {
 
 # get a new line
@@ -142,7 +143,7 @@ END {
 
                 lock[k] = 0;
 
-                print " in : " name[k] " last line (" $0 ") "
+#                print " in : " name[k] " last line (" $0 ") "
 
                 }   
 
@@ -154,6 +155,8 @@ END {
             # o primeiro arquivo eh a referencia, nao pode ter fiducial repetido. 
 
                 fiducial = $1;
+
+                if (fiducial == "") exit
 
 # determina o uuid e a data
 
@@ -215,7 +218,7 @@ END {
 
             else {
 
-                print ">>> ERROR <<< " fiducial " ge " check
+                print ">>> " name[k] " ERROR <<< " fiducial " ge " check
         
                 }
             }
@@ -223,13 +226,13 @@ END {
 
 # close document: close (file);
 
-        ndocs = ndocs + 1
+#        ndocs = ndocs + 1
 
-        if (ndocs > 100) {
+#        if (ndocs > 1000000) {
 
-            eof = 0;
+#            eof = 0;
 
-            }
+#            }
 
         }
 
