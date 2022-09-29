@@ -176,6 +176,8 @@ END {
 
             check = $1;
 
+            if ( check == "") exit
+
             # print " file: " k " fiducial : (" fiducial ") check : (" check ") "
 
             if (fiducial == check) {
@@ -219,6 +221,11 @@ END {
             else {
 
                 print ">>> " name[k] " ERROR <<< " fiducial " ge " check
+
+                # advance next record same file
+
+                if (k > 0) k = k - 1
+
         
                 }
             }
