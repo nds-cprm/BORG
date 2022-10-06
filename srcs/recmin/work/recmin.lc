@@ -1,0 +1,299 @@
+                                                         dicionário de dados do geobank
+
+                                                              módulo: recmin
+
+tabela: rm_assocmin_x_subs (tabela de cadastro da associação mineralogica, por substancia.)
+
+cod_assocmin_subs          código da asociação mineralogica por substância. código sequencial.    number(11,0)          n
+
+cod_recmin_substmin        código da substância cadastrada no recurso mineral.                    number(11,0)          n
+
+cod_mineral_minerio        código do mineral.                                                     number(11,0)          n
+
+ordem                      ordem de importancia do mineral.                                       number(11,0)          y
+
+
+tabela: rm_auditoria (tabela para armazenar dados de inclusões ou alterações na tabela rm_recursosminerais, para apresentar na
+tela o usuario que fez as ações na tabela.)
+
+cod_rec_min                código do recurso mineral.                                             number(11,0)          n
+
+logon                      login do usuario.                                                      varchar2              n
+
+data                       data.                                                                  date                  n
+
+sureg                      código de sureg.                                                       number(11,0)          y
+
+
+tabela: rm_clasutl_x_subs (tabela para cadastro da classe utilitaria, por substancia.)
+
+cod_clasutil_x_subs          código da classe utilitaria por substância. código sequencial.   number(11,0)          n
+
+cod_recmin_substmin          código da substância cadastrada no recurso mineral.              number(11,0)          n
+
+cod_class_utilitaria         código da classe utilitaria.                                     number(11,0)          n
+
+
+tabela: rm_estrmin_x_subs (tabela de cadastro de estrutura mineral, por substancia.)
+
+cod_estrmin_x_subs           código da estrutura mineral por substância. código sequencial.   number(11,0)          n
+
+cod_recmin_substmin          código da substância cadastrada no recurso mineral.              number(11,0)          n
+
+cod_estrutura_min            código da estrutura mineral.                                     number(11,0)          n
+
+
+tabela: rm_ganga (tabela de ganga.)
+
+cod_ganga                    código da ganga. código sequencial.                              number(11,0)          n
+
+cod_rec_min                  código do recurso mineral.                                       number(11,0)          y
+
+cod_mineral_minerio          código do mineral de gauga.                                      number(11,0)          y
+
+
+tabela: rm_geometria (tabela de cadastro da geometria do recurso mineral.)
+
+cod_geometria               código da geometria. código sequencial.                                  number(11,0)           n
+
+cod_rec_min                 código do recurso mineral.                                               number(11,0)           n
+
+nm_corpo                    nome do corpo.                                                           varchar2               y
+
+comprimento                 comprimento, em metros.                                                  float(126)             y
+
+area                        area, em metros quadrados.                                               float(126)             y
+
+profundidade                profundindade, em metros.                                                float(126)             y
+
+capeamento                  capeamento, em metros.                                                   float(126)             y
+
+az_caimento                 azimute do caimento, em graus.                                           number(3,0)            y
+
+ang_caimento                angulo de caimento, em graus.                                            number(2,0)            y
+
+rel_estmin                  relação esteril/minerio, proporção e:m.                                  varchar2               y
+
+espessura                   espessura, em metros.                                                    float(126)             y
+
+
+tabela: rm_lavra_x_subs (tabela para cadastro de lavra, por substancia, caso o material encontrado seja numa mina.)
+
+cod_lavra_x_subs            código da lavra x substância. código sequencial.                         number(11,0)           n
+
+cod_recmin_substmin               código da substancia (ja cadastrada).                                                              number(11,0)          n
+
+rec_lavra                         percentual de recuperação na etapa de lavra do minerio.                                            number(11,0)          y
+
+dil_lavra                         percentual de diluição de esteril incorporado durante a lavra do minerio.                          number(11,0)          y
+
+cod_met_lavra                     código do tipo da lavra encontrada.                                                                number(11,0)          y
+
+prod_anual                        produção anual.                                                                                    varchar2              y
+
+cod_und_prod                      código da unidade da produção anual.                                                               number(11,0)          y
+
+ini_lavra                         ano de inicio da lavra.                                                                            number                y
+
+
+tabela: rm_metalogenia (tabela de metalogenia por recurso mineral.)
+
+cod_metalogenia                   código da metalogenia. código sequencial.                                                          number(11,0)          n
+
+cod_rec_min                       código do recurso mineral.                                                                         number(11,0)          n
+
+cod_classif_tipologia_hosp        código de classificação tipologica da rocha hospedeira, dados antigos, so para exibição em tela.   number(11,0)          y
+
+cod_classif_metalo_modelo código da natureza do processo genetico, dados antigos, so para exibição em tela.                          number(11,0)          y
+
+cod_modelo_deposito               codigo do modelo de deposito, dados antigos, so para exibição em tela.                             number(11,0)          y
+
+cod_assoc_geoq_principal          código da associação geoquimica principal, dados antigos, so para exibição em tela.                number(11,0)          y
+
+cod_processo                      código do processo gerador da(s) mineralização(ões).                                               number(11,0)          y
+
+cod_classificacao          código da classificação.                                                                 number(11,0)          y
+
+cod_mod_deposito           código do modelo do deposito.                                                            number(11,0)          y
+
+cod_tipologia              código da tipologia da rocha hospedeira.                                                 number(11,0)          y
+
+
+tabela: rm_metalog_x_tp_mineralizacao (tabela de tipos de mineralizações relacionadas ao processo da metalogenia.)
+
+cod_rm_met_x_tp_min        código metalogenia x tipo mineralização. código sequencial.                              number(11,0)          n
+
+cod_metalogenia            código da metalogenia.                                                                   number(11,0)          n
+
+cod_tp_mineralizacao       código do tipo da mineralização.                                                         number(11,0)          n
+
+
+tabela: rm_ocorrencia (tabela de ocorrências minerais)
+
+id                         identificador único da ocorrência mineral. código sequencial.                            number(38,0)          n
+
+                           identificador de referência para a tabela que combina o status econômico com o grau de
+id_status_x_importancia                                                                                             number(11,0)          n
+                           importância da ocorrência.
+
+erro_real                  erro real.                                                                               float(126)            y
+
+id_afloramento             identificador do afloramento da ocorrência.                                              number(11,0)          n
+
+id_provincia               identificador da provincia mineral (origem).                                             number(11,0)          n
+
+id_situacao_mina              identificador da situação da mina.                                   number(11,0)          y
+
+id_motivo_inatividade_mina    identificador do motivo da inatividade da mina.                      number(11,0)          y
+
+id_situacao_garimpo           identificador da situação do garimpo.                                number(11,0)          y
+
+id_motivo_inatividade_garimpo identificador do motivo da inatividade do garimpo.                   number(11,0)          y
+
+id_localizacao_mina           identificador da localização da mina.                                number(11,0)          y
+
+
+tabela: rm_producao_x_subs (tabela para cadastro de produção, por substancia, caso o status economico seja mina ou garimpo.)
+
+cod_producao_x_subs           código da produção x substância. código sequencial.                  number(11,0)          n
+
+cod_recmin_substmin           código da substancia (ja cadastrada).                                number(11,0)          n
+
+cod_clas_producao             código da classificação do periodo da produção.                      number(11,0)          n
+
+ano_inicio                    ano de inicio da produção.                                           number(5,0)           n
+
+ano_fim                       ano-fim da produção.                                                 number(5,0)           y
+
+qtd_prod_br                   quantidade de produto bruto.                                         float(126)            y
+
+cod_und_prod_br               código da unidade da quantidade de produto bruto.                    number(11,0)          y
+
+qtd_prod                      quantidade da produção.                                              float(126)            y
+
+cod_und_prod                  código da unidade da quantidade de produção.                         number(11,0)          y
+
+fonte_informacao           fonte da informação. (bibliografica ou informação local).                  varchar2              y
+
+observacao                 observações gerais.                                                        varchar2              y
+
+qtd_min_cont_oxi           teor de mineral oxidado.                                                   number(11,2)          y
+
+qtd_min_cont               teor de mineral contido.                                                   number(11,2)          y
+
+
+tabela: rm_renca_x_subs (tabela de rocha encaixante referente a substancia.)
+
+cod_renca_x_subs           código da rocha encaixante x substância. código sequencial.                number(11,0)          n
+
+cod_recmin_substmin        código da substancia (ja cadastrada).                                      number(11,0)          n
+
+cod_tipo_rocha             código da rocha.                                                           number(11,0)          n
+
+
+tabela: rm_reserva_x_subs (tabela para cadastro de reserva, caso o status economico seja uma mina.)
+
+cod_reserva_x_subs         código da reserva x substância. código sequencial.                         number(11,0)          n
+
+cod_recmin_substmin        código da substancia(ja cadastrada).                                       number(11,0)          n
+
+cod_tipo_reserva           código do tipo da reserva.                                                 number(11,0)          n
+
+cod_unid_minerio           código da unidade de minerio contido.                                      number(11,0)          n
+
+cod_clas_res               código de classe da reserva.                                          number(11,0)          y
+
+cod_criterio               código do criterio para classificação do tipo de reserva.             number(11,0)          y
+
+ano_cubagem                ano da cubagem ().                                                    number(5,0)           y
+
+qtminerio                  quantidade de minerio contido.                                        float(126)            y
+
+fonte_informacao           fonte da informação. (bibliografica ou informação local).             varchar2              y
+
+observacao                 observações em geral.                                                 varchar2              y
+
+qtd_min_cont_oxi           teor de minetal contido.                                              number(11,2)          y
+
+qtd_min_cont               teor de mineral oxidado.                                              number(11,2)          y
+
+
+tabela: rm_rhosp_x_subs (tabela de rocha hospedeira referente a substancia.)
+
+cod_rhosp_x_subs           código da rocha hospedeira x substância. código sequencial.           number(11,0)          n
+
+cod_recmin_substmin        código da substancia(ja cadastrada).                                  number(11,0)          n
+
+cod_tipo_rocha             código da rocha.                                                      number(11,0)          n
+
+
+tabela: rm_substancia_mineral (tabela para cadastro das substâncias das ocorrências minerais.)
+
+id                         identificador único do registro (sequencial).                       number(11,0)          n
+
+id_ocorrencia              identificador da ocorrência mineral da susbstância.                 number(11,0)          n
+
+id_substancia_mineral      identificador da substância mineral.                                number(11,0)          n
+
+id_importancia             identificador da importância da substância na ocorrência mineral.   number(11,0)          n
+
+id_tipo_genetico           identificador do tipo genético da substância mineral.               number(11,0)          n
+
+idade_mineralizacao        idade da mineralização. (medida).                                   number(6,0)           y
+
+id_metodo_geocronologico   identificador do método de datação geocronológica da susbstância.   number(11,0)          y
+
+
+tabela: rm_teor_producao (tabela de cadastro do teor da produção.)
+
+cod_teor_producao          código do teor de produção. código sequencial.                      number(11,0)          n
+
+cod_producao_subs          código da produção ja casdastrada.                                  number(11,0)          n
+
+cod_subst                  código da substancia(ja cadastrada).                                number(11,0)          n
+
+teor                       teor da produção.                                                   float(126)            y
+
+cod_unid_teor              código da unidade do teor.                                          number(11,0)          y
+
+qtd_metal_contido          quantidade do metal contido.                                        float(126)            y
+
+cod_unid_metal_contido     código da unidade da quantidade do metal contido.                   number(11,0)          y
+
+
+tabela: rm_teor_reserva (tabela de cadastro do teor da reserva.)
+
+cod_teor_reserva            código do teor da reserva. código sequencial.          number(11,0)          n
+
+cod_reserva_subs            código da reserva.                                     number(11,0)          n
+
+cod_subst                   código da substancia(ja cadastrada).                   number(11,0)          n
+
+teor                        teor.                                                  float(126)            y
+
+cod_unidade_teor            código da unidade do teor.                             number(11,0)          y
+
+qtd_min_contido             quantidade do minerio.                                 float(126)            y
+
+cod_unid_min_contido        código da unidade da quantidade do minerio contido.    number(11,0)          y
+
+
+tabela: rm_textmin_x_subs (tabela de cadastro das texturas por substancia.)
+
+cod_textmin_x_subs          código da textura por substância. código sequencial.   number(11,0)          n
+
+cod_recmin_substmin         código da substancia(ja cadastrada).                   number(11,0)          n
+
+cod_textura_min             textura da substância.                                 number(11,0)          n
+
+
+tabela: rm_tpalt_x_subs (tabela para cadastro da alteração hidrotermal, por substancia.)
+
+campo                       descrição do campo                                                   tipo do campo    obrigatório
+
+cod_tpalt_x_subs            código da alteração hidrotermal por substância. código sequencial.   number(11,0)          n
+
+cod_recmin_substmin         código da substancia (ja cadastrada).                                number(11,0)          n
+
+cod_tipo_alteracao          código do tipo da alteração.                                         number(5,0)           n
+

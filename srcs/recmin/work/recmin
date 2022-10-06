@@ -1,0 +1,407 @@
+                                                         Dicionário de dados do GEOBANK
+
+                                                              Módulo: RECMIN
+
+Tabela: RM_ASSOCMIN_X_SUBS (Tabela de cadastro da Associação Mineralogica, por substancia.)
+
+Campo                      Descrição do campo                                                     Tipo do campo    Obrigatório
+
+COD_ASSOCMIN_SUBS          Código da asociação mineralogica por substância. Código Sequencial.    NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN        Código da substância cadastrada no Recurso Mineral.                    NUMBER(11,0)          N
+
+COD_MINERAL_MINERIO        Código do mineral.                                                     NUMBER(11,0)          N
+
+ORDEM                      Ordem de importancia do mineral.                                       NUMBER(11,0)          Y
+
+
+Tabela: RM_AUDITORIA (Tabela para armazenar dados de inclusões ou alterações na tabela RM_RECURSOSMINERAIS, para apresentar na
+tela o usuario que fez as ações na tabela.)
+Campo                      Descrição do campo                                                     Tipo do campo    Obrigatório
+
+COD_REC_MIN                Código do Recurso Mineral.                                             NUMBER(11,0)          N
+
+LOGON                      Login do usuario.                                                      VARCHAR2              N
+
+DATA                       Data.                                                                  DATE                  N
+
+SUREG                      Código de Sureg.                                                       NUMBER(11,0)          Y
+
+
+
+
+                                                                                                                  Página:   1
+                                                                  Módulo: RECMIN
+
+Tabela: RM_CLASUTL_X_SUBS (Tabela para cadastro da Classe Utilitaria, por substancia.)
+
+Campo                        Descrição do campo                                               Tipo do campo    Obrigatório
+
+COD_CLASUTIL_X_SUBS          Código da classe utilitaria por substância. Código Sequencial.   NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN          Código da substância cadastrada no Recurso Mineral.              NUMBER(11,0)          N
+
+COD_CLASS_UTILITARIA         Código da classe utilitaria.                                     NUMBER(11,0)          N
+
+
+Tabela: RM_ESTRMIN_X_SUBS (Tabela de cadastro de estrutura mineral, por substancia.)
+
+
+Campo                        Descrição do campo                                               Tipo do campo    Obrigatório
+
+COD_ESTRMIN_X_SUBS           Código da estrutura mineral por substância. Código Sequencial.   NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN          Código da substância cadastrada no Recurso Mineral.              NUMBER(11,0)          N
+
+COD_ESTRUTURA_MIN            Código da estrutura mineral.                                     NUMBER(11,0)          N
+
+
+Tabela: RM_GANGA (Tabela de Ganga.)
+
+Campo                        Descrição do campo                                               Tipo do campo    Obrigatório
+
+COD_GANGA                    Código da ganga. Código Sequencial.                              NUMBER(11,0)          N
+
+COD_REC_MIN                  Código do Recurso Mineral.                                       NUMBER(11,0)          Y
+
+COD_MINERAL_MINERIO          Código do mineral de gauga.                                      NUMBER(11,0)          Y
+
+
+
+
+                                                                                                              Página:   2
+                                                                Módulo: RECMIN
+
+Tabela: RM_GEOMETRIA (Tabela de cadastro da Geometria do Recurso Mineral.)
+
+Campo                       Descrição do campo                                                       Tipo do campo     Obrigatório
+
+COD_GEOMETRIA               Código da geometria. Código Sequencial.                                  NUMBER(11,0)           N
+
+COD_REC_MIN                 Código do Recurso Mineral.                                               NUMBER(11,0)           N
+
+NM_CORPO                    Nome do corpo.                                                           VARCHAR2               Y
+
+COMPRIMENTO                 Comprimento, em metros.                                                  FLOAT(126)             Y
+
+AREA                        Area, em metros quadrados.                                               FLOAT(126)             Y
+
+PROFUNDIDADE                Profundindade, em metros.                                                FLOAT(126)             Y
+
+CAPEAMENTO                  Capeamento, em metros.                                                   FLOAT(126)             Y
+
+AZ_CAIMENTO                 Azimute do caimento, em graus.                                           NUMBER(3,0)            Y
+
+ANG_CAIMENTO                Angulo de caimento, em graus.                                            NUMBER(2,0)            Y
+
+REL_ESTMIN                  Relação esteril/minerio, Proporção E:M.                                  VARCHAR2               Y
+
+ESPESSURA                   Espessura, em metros.                                                    FLOAT(126)             Y
+
+
+Tabela: RM_LAVRA_X_SUBS (Tabela para cadastro de Lavra, por substancia, caso o material encontrado seja numa Mina.)
+
+Campo                       Descrição do campo                                                       Tipo do campo     Obrigatório
+
+COD_LAVRA_X_SUBS            Código da Lavra x substância. Código Sequencial.                         NUMBER(11,0)           N
+
+
+
+
+                                                                                                                      Página:   3
+                                                                        Módulo: RECMIN
+
+COD_RECMIN_SUBSTMIN               Código da Substancia (ja cadastrada).                                                              NUMBER(11,0)          N
+
+REC_LAVRA                         Percentual de recuperação na etapa de lavra do minerio.                                            NUMBER(11,0)          Y
+
+DIL_LAVRA                         Percentual de diluição de esteril incorporado durante a lavra do minerio.                          NUMBER(11,0)          Y
+
+COD_MET_LAVRA                     Código do Tipo da Lavra encontrada.                                                                NUMBER(11,0)          Y
+
+PROD_ANUAL                        Produção anual.                                                                                    VARCHAR2              Y
+
+COD_UND_PROD                      Código da Unidade da Produção anual.                                                               NUMBER(11,0)          Y
+
+INI_LAVRA                         Ano de inicio da lavra.                                                                            NUMBER                Y
+
+
+Tabela: RM_METALOGENIA (Tabela de Metalogenia por Recurso Mineral.)
+
+
+Campo                             Descrição do campo                                                                                 Tipo do campo    Obrigatório
+
+COD_METALOGENIA                   Código da metalogenia. Código Sequencial.                                                          NUMBER(11,0)          N
+
+COD_REC_MIN                       Código do Recurso Mineral.                                                                         NUMBER(11,0)          N
+
+COD_CLASSIF_TIPOLOGIA_HOSP        Código de classificação tipologica da rocha hospedeira, dados antigos, so para exibição em tela.   NUMBER(11,0)          Y
+
+COD_CLASSIF_METALO_MODELO Código da Natureza do processo genetico, dados antigos, so para exibição em tela.                          NUMBER(11,0)          Y
+
+COD_MODELO_DEPOSITO               codigo do modelo de deposito, dados antigos, so para exibição em tela.                             NUMBER(11,0)          Y
+
+COD_ASSOC_GEOQ_PRINCIPAL          Código da Associação Geoquimica principal, dados antigos, so para exibição em tela.                NUMBER(11,0)          Y
+
+COD_PROCESSO                      Código do Processo gerador da(s) mineralização(ões).                                               NUMBER(11,0)          Y
+
+
+
+
+                                                                                                                                                     Página:   4
+                                                                 Módulo: RECMIN
+
+COD_CLASSIFICACAO          Código da Classificação.                                                                 NUMBER(11,0)          Y
+
+COD_MOD_DEPOSITO           Código do Modelo do deposito.                                                            NUMBER(11,0)          Y
+
+COD_TIPOLOGIA              Código da Tipologia da Rocha Hospedeira.                                                 NUMBER(11,0)          Y
+
+
+Tabela: RM_METALOG_X_TP_MINERALIZACAO (Tabela de tipos de Mineralizações relacionadas ao processo da metalogenia.)
+
+Campo                      Descrição do campo                                                                       Tipo do campo    Obrigatório
+
+COD_RM_MET_X_TP_MIN        Código metalogenia x Tipo mineralização. Código Sequencial.                              NUMBER(11,0)          N
+
+COD_METALOGENIA            Código da Metalogenia.                                                                   NUMBER(11,0)          N
+
+COD_TP_MINERALIZACAO       Código do Tipo da mineralização.                                                         NUMBER(11,0)          N
+
+
+Tabela: RM_OCORRENCIA (Tabela de ocorrências minerais)
+
+
+Campo                      Descrição do campo                                                                       Tipo do campo    Obrigatório
+
+ID                         Identificador único da ocorrência mineral. Código sequencial.                            NUMBER(38,0)          N
+
+                           Identificador de referência para a tabela que combina o status econômico com o grau de
+ID_STATUS_X_IMPORTANCIA                                                                                             NUMBER(11,0)          N
+                           importância da ocorrência.
+
+ERRO_REAL                  Erro real.                                                                               FLOAT(126)            Y
+
+ID_AFLORAMENTO             Identificador do afloramento da ocorrência.                                              NUMBER(11,0)          N
+
+ID_PROVINCIA               Identificador da provincia mineral (Origem).                                             NUMBER(11,0)          N
+
+
+
+
+                                                                                                                                    Página:   5
+                                                                      Módulo: RECMIN
+
+ID_SITUACAO_MINA              Identificador da situação da mina.                                   NUMBER(11,0)          Y
+
+ID_MOTIVO_INATIVIDADE_MINA    Identificador do motivo da inatividade da mina.                      NUMBER(11,0)          Y
+
+ID_SITUACAO_GARIMPO           Identificador da situação do garimpo.                                NUMBER(11,0)          Y
+
+ID_MOTIVO_INATIVIDADE_GARIM
+                              Identificador do motivo da inatividade do garimpo.                   NUMBER(11,0)          Y
+PO
+
+ID_LOCALIZACAO_MINA           Identificador da localização da mina.                                NUMBER(11,0)          Y
+
+
+Tabela: RM_PRODUCAO_X_SUBS (Tabela para cadastro de Produção, por substancia, caso o status economico seja mina ou garimpo.)
+
+
+Campo                         Descrição do campo                                                   Tipo do campo    Obrigatório
+
+COD_PRODUCAO_X_SUBS           Código da produção x substância. Código Sequencial.                  NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN           Código da Substancia (ja cadastrada).                                NUMBER(11,0)          N
+
+COD_CLAS_PRODUCAO             Código da classificação do periodo da produção.                      NUMBER(11,0)          N
+
+ANO_INICIO                    Ano de inicio da produção.                                           NUMBER(5,0)           N
+
+ANO_FIM                       Ano-fim da produção.                                                 NUMBER(5,0)           Y
+
+QTD_PROD_BR                   Quantidade de produto bruto.                                         FLOAT(126)            Y
+
+COD_UND_PROD_BR               Código da Unidade da quantidade de produto bruto.                    NUMBER(11,0)          Y
+
+QTD_PROD                      Quantidade da produção.                                              FLOAT(126)            Y
+
+COD_UND_PROD                  Código da Unidade da quantidade de produção.                         NUMBER(11,0)          Y
+
+
+
+
+                                                                                                                   Página:     6
+                                                                 Módulo: RECMIN
+
+FONTE_INFORMACAO           Fonte da informação. (bibliografica ou informação local).                  VARCHAR2              Y
+
+OBSERVACAO                 Observações gerais.                                                        VARCHAR2              Y
+
+QTD_MIN_CONT_OXI           Teor de mineral oxidado.                                                   NUMBER(11,2)          Y
+
+QTD_MIN_CONT               Teor de mineral contido.                                                   NUMBER(11,2)          Y
+
+
+Tabela: RM_RENCA_X_SUBS (Tabela de Rocha Encaixante referente a Substancia.)
+
+Campo                      Descrição do campo                                                         Tipo do campo    Obrigatório
+
+COD_RENCA_X_SUBS           Código da Rocha encaixante x substância. Código Sequencial.                NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN        Código da Substancia (ja cadastrada).                                      NUMBER(11,0)          N
+
+COD_TIPO_ROCHA             Código da Rocha.                                                           NUMBER(11,0)          N
+
+
+Tabela: RM_RESERVA_X_SUBS (Tabela para cadastro de Reserva, caso o status economico seja uma Mina.)
+
+
+Campo                      Descrição do campo                                                         Tipo do campo    Obrigatório
+
+COD_RESERVA_X_SUBS         Código da Reserva x substância. Código Sequencial.                         NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN        Código da Substancia(ja cadastrada).                                       NUMBER(11,0)          N
+
+COD_TIPO_RESERVA           Código do Tipo da Reserva.                                                 NUMBER(11,0)          N
+
+COD_UNID_MINERIO           Código da Unidade de minerio contido.                                      NUMBER(11,0)          N
+
+
+
+
+                                                                                                                      Página:   7
+                                                                 Módulo: RECMIN
+
+COD_CLAS_RES               Código de Classe da reserva.                                          NUMBER(11,0)          Y
+
+COD_CRITERIO               Código do Criterio para classificação do tipo de reserva.             NUMBER(11,0)          Y
+
+ANO_CUBAGEM                Ano da cubagem ().                                                    NUMBER(5,0)           Y
+
+QTMINERIO                  Quantidade de minerio contido.                                        FLOAT(126)            Y
+
+FONTE_INFORMACAO           Fonte da informação. (bibliografica ou informação local).             VARCHAR2              Y
+
+OBSERVACAO                 Observações em geral.                                                 VARCHAR2              Y
+
+QTD_MIN_CONT_OXI           Teor de minetal contido.                                              NUMBER(11,2)          Y
+
+QTD_MIN_CONT               Teor de mineral oxidado.                                              NUMBER(11,2)          Y
+
+
+Tabela: RM_RHOSP_X_SUBS (Tabela de Rocha Hospedeira referente a Substancia.)
+
+Campo                      Descrição do campo                                                    Tipo do campo    Obrigatório
+
+COD_RHOSP_X_SUBS           Código da Rocha hospedeira x substância. Código Sequencial.           NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN        Código da Substancia(ja cadastrada).                                  NUMBER(11,0)          N
+
+COD_TIPO_ROCHA             Código da Rocha.                                                      NUMBER(11,0)          N
+
+
+Tabela: RM_SUBSTANCIA_MINERAL (Tabela para cadastro das substâncias das ocorrências minerais.)
+
+
+Campo                      Descrição do campo                                                    Tipo do campo    Obrigatório
+
+
+
+
+                                                                                                                 Página:   8
+                                                                  Módulo: RECMIN
+
+ID                         Identificador único do registro (Sequencial).                       NUMBER(11,0)          N
+
+ID_OCORRENCIA              Identificador da ocorrência mineral da susbstância.                 NUMBER(11,0)          N
+
+ID_SUBSTANCIA_MINERAL      Identificador da substância mineral.                                NUMBER(11,0)          N
+
+ID_IMPORTANCIA             Identificador da importância da substância na ocorrência mineral.   NUMBER(11,0)          N
+
+ID_TIPO_GENETICO           Identificador do tipo genético da substância mineral.               NUMBER(11,0)          N
+
+IDADE_MINERALIZACAO        Idade da mineralização. (Medida).                                   NUMBER(6,0)           Y
+
+ID_METODO_GEOCRONOLOGICO   Identificador do método de datação geocronológica da susbstância.   NUMBER(11,0)          Y
+
+
+Tabela: RM_TEOR_PRODUCAO (Tabela de cadastro do teor da produção.)
+
+
+Campo                      Descrição do campo                                                  Tipo do campo    Obrigatório
+
+COD_TEOR_PRODUCAO          Código do teor de produção. Código Sequencial.                      NUMBER(11,0)          N
+
+COD_PRODUCAO_SUBS          Código da produção ja casdastrada.                                  NUMBER(11,0)          N
+
+COD_SUBST                  Código da Substancia(ja cadastrada).                                NUMBER(11,0)          N
+
+TEOR                       Teor da Produção.                                                   FLOAT(126)            Y
+
+COD_UNID_TEOR              Código da Unidade do teor.                                          NUMBER(11,0)          Y
+
+QTD_METAL_CONTIDO          Quantidade do metal contido.                                        FLOAT(126)            Y
+
+COD_UNID_METAL_CONTIDO     Código da Unidade da quantidade do metal contido.                   NUMBER(11,0)          Y
+
+
+
+
+                                                                                                               Página:   9
+                                                                Módulo: RECMIN
+
+
+Tabela: RM_TEOR_RESERVA (Tabela de cadastro do teor da reserva.)
+
+
+Campo                       Descrição do campo                                     Tipo do campo    Obrigatório
+
+COD_TEOR_RESERVA            Código do teor da reserva. Código Sequencial.          NUMBER(11,0)          N
+
+COD_RESERVA_SUBS            Código da Reserva.                                     NUMBER(11,0)          N
+
+COD_SUBST                   Código da Substancia(ja cadastrada).                   NUMBER(11,0)          N
+
+TEOR                        Teor.                                                  FLOAT(126)            Y
+
+COD_UNIDADE_TEOR            Código da Unidade do teor.                             NUMBER(11,0)          Y
+
+QTD_MIN_CONTIDO             Quantidade do minerio.                                 FLOAT(126)            Y
+
+COD_UNID_MIN_CONTIDO        Código da Unidade da quantidade do minerio contido.    NUMBER(11,0)          Y
+
+
+Tabela: RM_TEXTMIN_X_SUBS (Tabela de cadastro das texturas por substancia.)
+
+
+Campo                       Descrição do campo                                     Tipo do campo    Obrigatório
+
+COD_TEXTMIN_X_SUBS          Código da Textura por substância. Código Sequencial.   NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN         Código da Substancia(ja cadastrada).                   NUMBER(11,0)          N
+
+COD_TEXTURA_MIN             Textura da substância.                                 NUMBER(11,0)          N
+
+
+
+
+                                                                                                   Página: 10
+                                                                Módulo: RECMIN
+
+Tabela: RM_TPALT_X_SUBS (Tabela para cadastro da Alteração Hidrotermal, por substancia.)
+
+Campo                       Descrição do campo                                                   Tipo do campo    Obrigatório
+
+COD_TPALT_X_SUBS            Código da Alteração hidrotermal por substância. Código Sequencial.   NUMBER(11,0)          N
+
+COD_RECMIN_SUBSTMIN         Código da Substancia (ja cadastrada).                                NUMBER(11,0)          N
+
+COD_TIPO_ALTERACAO          Código do Tipo da alteração.                                         NUMBER(5,0)           N
+
+
+
+
+                                                                                                                 Página: 11
+

@@ -1,0 +1,27 @@
+
+
+1. transformar o texto para minusculas 
+
+    tr [:upper:] [:lower:] < arquivo > arquivo.lc
+
+2. editar o arquivo para o formato:
+
+    :%s/ .*//
+
+    tabela1
+    campo
+    campo
+    campo
+    tabela2
+    campo
+    campo
+
+3. montar lista de tabela.campo
+
+    awk -f tfs.awk < arquivo.lc > lista.1
+
+4. montar lista de tabela, campo, campo, campo
+
+    awk -f tss.awk < arquivo.lc > lista.2
+
+
