@@ -1,6 +1,0 @@
-SQL> desc af_bb_tipo_analise
-Nome             Nulo?    Tipo          
----------------- -------- ------------- 
-COD_TIPO_ANALISE NOT NULL NUMBER(5)     
-DES_TIPO_ANALISE          VARCHAR2(255) 
-DESCRIPTION               VARCHAR2(255) 

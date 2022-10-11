@@ -1,6 +1,0 @@
-SQL> desc af_bb_tipo_afloramento
-Nome    Nulo?    Tipo          
-------- -------- ------------- 
-ID      NOT NULL NUMBER(5)     
-NOME_PT          VARCHAR2(50)  
-NOME_EN          VARCHAR2(255) 

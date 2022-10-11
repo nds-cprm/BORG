@@ -1,9 +1,0 @@
-SQL> desc af_ilustracoes
-Nome                Nulo?    Tipo          
-------------------- -------- ------------- 
-COD_ILUSTRACAO      NOT NULL NUMBER(38)    
-COD_AFLORAMENTO     NOT NULL NUMBER(11)    
-COD_TIPO_ILUSTRACAO NOT NULL NUMBER(5)     
-LEGENDA_ILUSTRACAO           VARCHAR2(255) 
-NAME                         VARCHAR2(50)  
-NOME_ANTIGO                  VARCHAR2(255) 

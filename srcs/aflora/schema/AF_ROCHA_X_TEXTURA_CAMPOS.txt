@@ -1,6 +1,0 @@
-SQL> desc af_rocha_x_textura
-Nome              Nulo?    Tipo       
------------------ -------- ---------- 
-COD_RX_X_TEXT     NOT NULL NUMBER(11) 
-COD_TEXTURA_IGNEA NOT NULL NUMBER(5)  
-COD_ROCHA         NOT NULL NUMBER(11) 

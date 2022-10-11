@@ -1,8 +1,0 @@
-SQL> desc af_log_carga_ilustracoes
-Nome            Nulo? Tipo          
---------------- ----- ------------- 
-COD_ILUSTRACAO        NUMBER        
-NOME_ILUSTRACAO       VARCHAR2(255) 
-COD_FOLHA             NUMBER        
-DATA_CARGA            DATE          
-ERRO                  VARCHAR2(500) 

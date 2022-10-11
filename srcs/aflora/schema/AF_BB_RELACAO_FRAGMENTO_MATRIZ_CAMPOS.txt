@@ -1,6 +1,0 @@
-SQL> desc af_bb_relacao_fragmento_matriz
-Nome                         Nulo?    Tipo          
----------------------------- -------- ------------- 
-COD_RELACAO_FRAGMENTO_MATRIZ NOT NULL NUMBER(5)     
-DES_RELACAO_FRAGMENTO                 VARCHAR2(255) 
-DESCRIPTION                           VARCHAR2(255) 

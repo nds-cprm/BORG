@@ -1,9 +1,0 @@
-SQL> desc af_rocha_x_estruturas
-Nome                Nulo?    Tipo       
-------------------- -------- ---------- 
-COD_RX_X_ESTRUTURAS NOT NULL NUMBER(11) 
-COD_ESTRUTURAS_RX   NOT NULL NUMBER(5)  
-ANG_NORTE                    NUMBER(5)  
-MERGULHO_CAIMENTO            NUMBER(5)  
-COD_SENTIDO                  NUMBER(5)  
-COD_ROCHA           NOT NULL NUMBER(11) 

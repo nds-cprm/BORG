@@ -1,7 +1,0 @@
-"COD_NATUREZA_FRAGMENTO"	"DES_NATUREZA_FRAGMENTO"	"DESCRIPTION"
-1	"Vulcanoclásticos (Piroclásticos)"	"Volanoclastic (Pyroclastic)"
-2	"Terrígenos"	"Terrigenous"
-3	"Carbonáticos"	"Carbonatic"
-4	"Líticos"	"Lithic"
-5	"Xenólitos"	"Xenoliths"
-6	"Bioclastos"	"Bioclasts"

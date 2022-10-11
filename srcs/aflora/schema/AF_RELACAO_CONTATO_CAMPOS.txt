@@ -1,8 +1,0 @@
-SQL> desc af_relacao_contato
-Nome             Nulo?    Tipo       
----------------- -------- ---------- 
-COD_RELACAO      NOT NULL NUMBER(11) 
-COD_AFLORAMENTO  NOT NULL NUMBER(11) 
-COD_ROCHA1       NOT NULL NUMBER(11) 
-COD_TIPO_CONTATO NOT NULL NUMBER(5)  
-COD_ROCHA2       NOT NULL NUMBER(11) 

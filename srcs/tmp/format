@@ -1,8 +1,0 @@
-
- cat $1 | grep "\^" &&  echo "Error: Could not run on a file with '^'" && exit
- 
- cat $1 | sed -e ' s/\t/\^/g; s/"//g; ' | tr -d '\t' > $1.csvf
-
- awk -f c2j.awk < $1.csvf > $1.json
-
-

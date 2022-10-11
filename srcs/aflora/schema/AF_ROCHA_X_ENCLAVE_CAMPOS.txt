@@ -1,8 +1,0 @@
-SQL> desc af_rocha_x_enclave
-Nome                 Nulo?    Tipo           
--------------------- -------- -------------- 
-COD_RX_X_ENCLAVE     NOT NULL NUMBER(11)     
-COD_TIPO_ENCLAVE     NOT NULL NUMBER(5)      
-COD_NATUREZA_ENCLAVE NOT NULL NUMBER(5)      
-COD_ROCHA            NOT NULL NUMBER(11)     
-DES_ENCLAVE                   VARCHAR2(4000) 

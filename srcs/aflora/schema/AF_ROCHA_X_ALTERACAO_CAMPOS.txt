@@ -1,7 +1,0 @@
-SQL> desc af_rocha_x_alteracao
-Nome                      Nulo?    Tipo       
-------------------------- -------- ---------- 
-COD_RX_X_ALTERACAO        NOT NULL NUMBER(11) 
-COD_TIPO_ALTERACAO        NOT NULL NUMBER(5)  
-COD_INTENSIDADE_ALTERACAO          NUMBER(5)  
-COD_ROCHA                 NOT NULL NUMBER(11) 
