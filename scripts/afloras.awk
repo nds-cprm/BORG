@@ -6,11 +6,16 @@
 #   multicampos devem ser na forma 
 #   "chave" : [ { conteudos }, { conteudos }, { conteudos } ],
 #
-#   por simplicidade:
-#   posteriormente os arquivos devem ser tratados com %s/,\r\t}/\r\t}/
+#   por simplicidade:  
+#   posteriormente },\r],\r deve ser substituido por }\r],\r
 #
 #   agsb@cprm 10/2022
 #
+#
+
+#
+# get a line from a named file
+# preserve $0 and wipe " from $1...$n
 #
 function get_line_csv( file ) {
 
@@ -44,6 +49,9 @@ function get_line_csv( file ) {
 }
 
 
+#
+# define parameters
+#
 BEGIN {
 
     FS = ",";
@@ -60,14 +68,16 @@ BEGIN {
 
 }
 
+#
 # loop of stdio file list
+#
 {
 
     if ( match ($0, "^#") )  next;
 
 # determina a sequencia de arquivos para o documento
     
-    print " raw: (" $0 ") "
+    # print " raw: (" $0 ") "
 
 # clean quotes
 
@@ -87,9 +97,15 @@ BEGIN {
 
         }
 
-# nome do arquivo
+# nome do arquivo para acesso
 
     name[cnt] = $1
+
+# nome do grupo de informação
+
+    tag[cnt] = name[cnt]
+
+    gsub (".csv.ok","",tag[cnt]); 
 
 # numero de campos, sem o nome do arquivo
     
@@ -101,13 +117,11 @@ BEGIN {
 
     line[cnt] = "";
 
-# bypass headers
+# bypass headers also verify file exists
 
     eof = get_line_csv( $1 );
 
-#    print " raw in: (" $0 ") "
-
-# novo arquivo
+# new file
 
     cnt++;
 
@@ -141,8 +155,6 @@ END {
 
                 eline = $0
 
-#                print " in : " name[k] " new line (" $0 ") "
-
                 }
 
             else {
@@ -151,14 +163,22 @@ END {
 
                 $0 = line[k] 
 
-           #     $1 = $1
+                $1 = $1
 
                 lock[k] = 0;
 
-#                print " in : " name[k] " last line (" $0 ") "
-
                 }   
 
+
+            check = $1;
+
+            if ( check == "") {
+
+                print "raw: EOF of " name[k]
+
+                continue
+
+                }
 
 # get a valid (no header) line
 
@@ -170,13 +190,15 @@ END {
 
                 if (fiducial == "") exit
 
+                tagh = ""
+
 # determina o uuid e a data
 
                 date_cmd | getline date; close (date_cmd);
 
                 uuid_cmd | getline uuid; close (uuid_cmd);
         
-                if (ndocs > 0) print "} "
+                if (ndocs > 0) print "},"
 
                 print "{ ";
 
@@ -188,27 +210,19 @@ END {
         
                 }   
 
-            check = $1;
+            if (tagh == "") {
 
-            if ( check == "") exit
+                print "\"" tag[k] "\" : [ "
 
-            # print " file: " k " fiducial : (" fiducial ") check : (" check ") "
+                tagh = "ok"
+
+                }
 
             if (fiducial == check) {
 
-                if (tag == "") {
-
-                    tag = name[k]
-
-                    gsub (".csv.ok","",tag); 
-
-                    print " \"" tag "\" : [ "
-
-                    }
-                
-                print "\t{"
-
                 j = size[k] - 1
+
+                print "\t{"
 
                 for (i = 1; i < j; i++ ) {
         
@@ -216,13 +230,11 @@ END {
 
                     gsub ("\"$","",$(i));
 
-                    if (i == (j - 1) ) print  "\t\"" fields[k][i] "\" : \"" $(i) "\""
-                    else print  "\t\"" fields[k][i] "\" : \"" $(i) "\","
+                    print  "\t\"" fields[k][i] "\" : \"" $(i) "\","
 
                     }
             
-                if ( k == (cnt - 1) ) print "\t}"
-                else print "\t},"
+                print "\t},"
 
 # stay in this file until ge
 
@@ -238,12 +250,9 @@ END {
 
                 line[k] = $0
 
-                if ( k == (cnt - 1) ) print " ]"
-                else print " ],"
+                tagh = ""
 
-                tag = ""
-                
-                # print "line : {" line[k] "} (" $0 ")"
+                print "],"
 
                 }
 
@@ -263,11 +272,13 @@ END {
 
         ndocs = ndocs + 1
 
-#        if (ndocs > 1000000) {
+# count and exit
 
-#            eof = 0;
+        if (ndocs > 20) {
 
-#            }
+            eof = 0;
+
+            }
 
         }
 
