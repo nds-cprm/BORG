@@ -200,13 +200,13 @@ END {
         
                 if (ndocs > 0) print "},"
 
-                print "{ ";
+                print " { ";
 
-                print "\"uuid\" : \"" uuid "\",";    
+                print " \"uuid\" : \"" uuid "\",";    
 
-                print "\"date\" : \"" date "\",";    
+                print " \"date\" : \"" date "\",";    
     
-                print "\"fiducial\" : \"" fiducial "\",";
+                print " \"fiducial\" : \"" fiducial "\",";
         
                 }   
 
@@ -274,7 +274,7 @@ END {
 
 # count and exit
 
-        if (ndocs > 20) {
+        if (1 && (ndocs > 20) ) {
 
             eof = 0;
 
